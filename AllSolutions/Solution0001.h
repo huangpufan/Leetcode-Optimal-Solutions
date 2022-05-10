@@ -12,7 +12,7 @@
 你可以按任意顺序返回答案。
 
  */
-class Solution {
+class Solution0001 {
 public:
     vector<int> twoSum(vector<int> &nums, int target) {
 
