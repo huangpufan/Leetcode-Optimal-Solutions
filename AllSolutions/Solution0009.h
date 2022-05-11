@@ -21,6 +21,7 @@ class Solution0009 {
 public:
     bool isPalindrome(int x) {
 
+    }
 };
 
 
