@@ -5,7 +5,7 @@
 #ifndef LEETCODE_OPTIMAL_SOLUTIONS_SOLUTIONCOMMON_H
 #define LEETCODE_OPTIMAL_SOLUTIONS_SOLUTIONCOMMON_H
 
-#endif //LEETCODE_OPTIMAL_SOLUTIONS_SOLUTIONCOMMON_H
+
 
 #include <vector>
 #include <cstring>
@@ -24,3 +24,4 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
+#endif //LEETCODE_OPTIMAL_SOLUTIONS_SOLUTIONCOMMON_H

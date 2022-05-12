@@ -17,6 +17,34 @@
 class Solution {
 public:
     string addBinary(string a, string b) {
-        
+        int carry = 0;
+        int thisBit = 0;
+        int aSub = 0, bSub = 0;
+        const int maxASub = a.length() - 1, maxBSub = b.length() - 1;
+        string res = "";
+        while (aSub <= maxASub || bSub <= maxBSub || carry == 1) {
+            thisBit =
+                    ((aSub <= maxASub) ? CharToInt(a[maxASub - aSub]) : 0) +
+                    ((bSub <= maxBSub) ? CharToInt(b[maxBSub - bSub]) : 0) +
+                    carry;
+
+            carry = ((thisBit > 1) ? 1 : 0);
+            thisBit = ((thisBit % 2 == 0) ? 0 : 1);
+
+            ++aSub;
+            ++bSub;
+            res.push_back(IntToChar(thisBit));
+        }
+        std::reverse(res.begin(), res.end());
+
+        return res;
+    }
+
+    int CharToInt(const char &c) {
+        return (c == '1' ? 1 : 0);
+    }
+
+    int IntToChar(const int &i) {
+        return (i == 1 ? '1' : '0');
     }
 };

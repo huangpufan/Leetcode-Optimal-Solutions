@@ -1,33 +1,10 @@
 #include <iostream>
 #include "SolutionCommon.h"
-
-class demo {
-public:
-    demo()  {
-        cout << "construct!" << endl;
-    }
-
-    demo(const demo &d)  {
-        cout << "copy construct!" << endl;
-    }
-
-    //添加移动构造函数
-    demo(demo &&d) {
-        cout << "move construct!" << endl;
-    }
-
-    ~demo() {
-        cout << "class destruct!" << endl;
-    }
-
-
-};
-
-demo get_demo() {
-    return demo();
-}
+#include "AllSolutions/Solution0067.h"
 
 int main() {
-    demo a = get_demo();
+    string a="11",b="1";
+    Solution s;
+    cout<<s.addBinary(a,b);
     return 0;
 }
