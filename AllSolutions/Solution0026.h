@@ -12,11 +12,11 @@
 
 class Solution {
 public:
-    int removeElement(vector<int>& nums, int val) {
-        size_t le=0,ri=0;
+    int removeDuplicates(vector<int>& nums) {
+        size_t le=0,ri=1;
 
         while(ri<nums.size()){
-            if(nums[ri]==val){
+            if(nums[ri]==nums[le]){
                 ++ri;
             }else{
                 nums[le++]=nums[ri++];
