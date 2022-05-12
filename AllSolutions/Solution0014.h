@@ -11,6 +11,7 @@
 
 class Solution {
 public:
+// 效率已经足够高，但是在实际情况的不同的情况下，可以有不同方向的优化。
     string longestCommonPrefix(vector<string>& strs) {
         string res="";
         for(int i=0;i<strs[0].length();i++){
@@ -25,3 +26,4 @@ public:
         return res;
     }
 };
+
