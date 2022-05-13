@@ -1,10 +1,10 @@
 #include <iostream>
 #include "SolutionCommon.h"
-#include "AllSolutions/Solution0067.h"
+#include "AllSolutions/Solution0205.h"
 
 int main() {
-    string a="11",b="1";
+    string a="badc",b="bada";
     Solution s;
-    cout<<s.addBinary(a,b);
+    cout<<s.isIsomorphic(a,b);
     return 0;
 }
