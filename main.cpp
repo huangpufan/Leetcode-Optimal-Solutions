@@ -1,10 +1,10 @@
 #include <iostream>
 #include "SolutionCommon.h"
-#include "AllSolutions/Solution0205.h"
+#include "AllSolutions/Solution0003.h"
 
 int main() {
-    string a="badc",b="bada";
+    string a="bbbbb",b="bada";
     Solution s;
-    cout<<s.isIsomorphic(a,b);
+    cout<<s.lengthOfLongestSubstring(a);
     return 0;
 }
