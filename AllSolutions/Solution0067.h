@@ -25,6 +25,7 @@ public:
         int aSub = 0, bSub = 0;
         const int maxASub = a.length() - 1, maxBSub = b.length() - 1;
         string res = "";
+        // 三木运算符，永远的神！这里狠狠地懂了什么是简洁的美
         while (aSub <= maxASub || bSub <= maxBSub || carry == 1) {
             thisBit =
                     ((aSub <= maxASub) ? CharToInt(a[maxASub - aSub]) : 0) +
@@ -51,3 +52,4 @@ public:
         return (i == 1 ? '1' : '0');
     }
 };
+

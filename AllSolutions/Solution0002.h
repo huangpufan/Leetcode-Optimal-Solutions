@@ -52,6 +52,12 @@ public:
     }
 };
 
+/*
+ * 原本的方法我记得是原来学严蔚敏的数据结构学的思路，先遍历到最短的，然后写两个循环。但是写完自己也觉得冗长
+ *
+ * 果然，有更好的办法，而且这个思路可以用在很多类似的问题上。类似于函数指针本质的用法，就是外界结构不变，内部处理更改。
+ *
+ */
 ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
     ListNode *p1 = l1, *p2 = l2;
     ListNode *head = new ListNode(-1), *p3 = head;
