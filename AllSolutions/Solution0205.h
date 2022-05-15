@@ -7,16 +7,15 @@
 
 #include "../SolutionCommon.h"
 
-/*
- * 205. 同构字符串 ez
- *
- * 给定两个字符串 s 和 t ，判断它们是否是同构的。
 
-    如果s中的字符可以按某种映射关系替换得到t，那么这两个字符串是同构的。
+/// 205. 同构字符串 ez
 
-    每个出现的字符都应当映射到另一个字符，同时不改变字符的顺序。不同字符不能映射到同一个字符上，相同字符只能映射到同一个字符上，字符可以映射到自己本身。
+// 给定两个字符串 s 和 t ，判断它们是否是同构的。
 
- */
+// 如果s中的字符可以按某种映射关系替换得到t，那么这两个字符串是同构的。
+
+// 每个出现的字符都应当映射到另一个字符，同时不改变字符的顺序。不同字符不能映射到同一个字符上，相同字符只能映射到同一个字符上，字符可以映射到自己本身。
+
 
 class Solution {
 public:
@@ -27,13 +26,25 @@ public:
         if(s.length()!=t.length()){
             return false;
         }
-        map<char,char>isomorphicMap;
+        unordered_map<char,char>isomorphicMap;
+        unordered_set<char>isSeenCharSet;
         for(int i=0;i<s.length();i++){
             if(isomorphicMap.find(s[i])!=isomorphicMap.end()){
-                
+                // 存在
+                if(isomorphicMap[s[i]]!=t[i]){
+                    return false;
+                }
+            }else{
+                // 不存在映射，检查下面的是否已经被建立过映射
+                if(isSeenCharSet.find(t[i])!=isSeenCharSet.end()){
+                    // 已经建立
+                    return false;
+                }else{
+                    isSeenCharSet.insert(t[i]);
+                }
+                isomorphicMap[s[i]]=t[i];
             }
         }
-        if()
         return true;
     }
 };
@@ -50,7 +61,9 @@ public:
  * 2.map 双向遍历法，需要两个人都算出 map 然后根据 map 遍历对方。
  *
  * 最好的应该是 3.一次 map 法，利用 char char map，一次取出对应位置，然后在遍历 s 字符串的过程中判断 t 中相应位置是否始终是该值。草，可以这样的。
+ * 不过写到一半发现如果上面的字符串字母种类更多那么下面就算不匹配也会正确，因为会判断该映射不存在然后保存。所以多用一个 set 来存下面已经有过那些字母已经被映射。
  *
+ * 更改后的做法效率提升一倍！
  */
 
 
