@@ -25,7 +25,6 @@ public:
         while (absX > 0) {
             int bit=absX % 10;
             absX/=10;
-            int tmp=0;
             if(absRes<=(INT32_MAX-bit)/10){
                 absRes=absRes*10+bit;
             }else{
