@@ -19,19 +19,19 @@ public:
 
         queue<ListNode *> q;
         ListNode *preHead = new ListNode;
-        preHead->next=head;
+        preHead->next = head;
 
-        ListNode *fast=preHead,*slow=preHead;
-        for(int i=0;i<n;i++){
-            fast=fast->next;
+        ListNode *fast = preHead, *slow = preHead;
+        for (int i = 0; i < n; i++) {
+            fast = fast->next;
         }
-        while(fast!= nullptr&&fast->next!= nullptr){
-            slow=slow->next;
-            fast=fast->next;
+        while (fast != nullptr && fast->next != nullptr) {
+            slow = slow->next;
+            fast = fast->next;
         }
-        slow->next=slow->next->next;
+        slow->next = slow->next->next;
 
-        auto res=preHead->next;
+        auto res = preHead->next;
 
         delete preHead;
 
@@ -67,9 +67,11 @@ ListNode *removeNthFromEnd(ListNode *head, int n) {
 //           这里我的报错百思不得其解，会告诉我释放有问题，空指针引用？但我都做了判断
 //        delete tmp;
     }
-//        delete preHead;
 
-    return preHead->next;
+    auto res = preHead->next;
+    delete preHead;
+
+    return res;
 }
 
 #endif //LEETCODE_OPTIMAL_SOLUTIONS_SOLUTION0019_H
