@@ -8,7 +8,7 @@
 #include "../SolutionCommon.h"
 
 
-/// 155. 最小栈
+/// 155. 最小栈 ez
 
 // 设计一个支持 push ，pop ，topNode 操作，并能在常数时间内检索到最小元素的栈。
 
@@ -88,5 +88,6 @@ public:
     }
 };
 
+// 核心是节点里放个 min，别的没啥好说的，我增加了几个用不到的东西。
 
 #endif //LEETCODE_OPTIMAL_SOLUTIONS_SOLUTION0155_H
