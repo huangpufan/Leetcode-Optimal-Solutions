@@ -8,7 +8,7 @@
 #include "../SolutionCommon.h"
 
 
-/// 141. 环形链表 ez
+// 141. 环形链表 ez
 
 // 给你一个链表的头节点 head ，判断链表中是否有环。
 

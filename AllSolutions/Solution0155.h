@@ -8,7 +8,7 @@
 #include "../SolutionCommon.h"
 
 
-/// 155. 最小栈 ez
+// 155. 最小栈 ez
 
 // 设计一个支持 push ，pop ，topNode 操作，并能在常数时间内检索到最小元素的栈。
 

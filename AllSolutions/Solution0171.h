@@ -6,7 +6,7 @@
 #define LEETCODE_OPTIMAL_SOLUTIONS_SOLUTION0171_H
 #include "../SolutionCommon.h"
 
-/// 171. Excel 表列序号 ez
+// 171. Excel 表列序号 ez
 // 给你一个字符串 columnTitle ，表示 Excel 表格中的列名称。返回 该列名称对应的列序号 。
 
 // 例如：

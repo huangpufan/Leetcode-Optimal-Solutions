@@ -8,7 +8,7 @@
 #include "../SolutionCommon.h"
 
 
-/// 219. 存在重复元素 II ez
+// 219. 存在重复元素 II ez
 
 // 给你一个整数数组 nums 和一个整数 k ，判断数组中是否存在两个 不同的索引 i 和 j ，
 
