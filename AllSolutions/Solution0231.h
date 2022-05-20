@@ -7,7 +7,7 @@
 #include "../SolutionCommon.h"
 
 
-// 231. 2 的幂
+// 231. 2 的幂 ez
 
 // 给你一个整数 n，请你判断该整数是否是 2 的幂次方。如果是，返回 true ；否则，返回 false 。
 
