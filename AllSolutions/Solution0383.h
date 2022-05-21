@@ -38,5 +38,6 @@ public:
 };
 
 // 我以为是一一对应，原来是 magazine >= ransomNote
+// 这道题有个小问题，就是 count 是看在 map 中存不存在，而不是值是不是为 0.
 
 #endif //LEETCODE_OPTIMAL_SOLUTIONS_SOLUTION0383_H
