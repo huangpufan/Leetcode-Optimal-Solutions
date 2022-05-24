@@ -31,7 +31,7 @@ public:
     }
 };
 
-// 搞个 map ，遍历就行了
-// 优化的空间在于用数组代替 map 但我感觉没必要
+// 搞个 _table ，遍历就行了
+// 优化的空间在于用数组代替 _table 但我感觉没必要
 
 #endif //LEETCODE_OPTIMAL_SOLUTIONS_SOLUTION0387_H

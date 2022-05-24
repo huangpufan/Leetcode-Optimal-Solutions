@@ -29,6 +29,6 @@ public:
     }
 };
 
-// map 存一下得了，要注意的一点是因为反正是往后更新，所以无脑更新 i。
+// _table 存一下得了，要注意的一点是因为反正是往后更新，所以无脑更新 i。
 
 #endif //LEETCODE_OPTIMAL_SOLUTIONS_SOLUTION0219_H
