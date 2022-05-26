@@ -16,9 +16,25 @@
 class Solution {
 public:
     vector<vector<int>> generate(int numRows) {
-        int[]triangle=new int[numRows][];
+
         vector<vector<int>>res;
+        for(int i=0;i<numRows;++i){
+            vector<int>oneLine(i+1);
+            res.push_back(oneLine);
+
+            res[i][0]=1;
+            for(int j=1;j<i;++j){
+                res[i][j]=res[i-1][j-1]+res[i-1][j];
+            }
+            if(i!=0){
+                res[i][i]=1;
+            }
+
+        }
+        return res;
     }
 };
+
+// 这道题就是一个二位 vector 的使用教程
 
 #endif //LEETCODE_OPTIMAL_SOLUTIONS_SOLUTION0118_H
