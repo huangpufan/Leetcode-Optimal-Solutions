@@ -19,6 +19,9 @@
 
 class Solution {
 public:
+
+    // 这道题的迭代不知道为什么，居然效率不是击败了百分之百
+
     int maxDepth(Node* root) {
        // 迭代还是。
        if(root== nullptr){
