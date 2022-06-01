@@ -16,6 +16,7 @@ public:
     int firstUniqChar(string s) {
         map<char,int>map;
         for(int i=0;i<s.size();i++){
+
             if(map.count(s[i])==0){
                 map[s[i]]=1;
             }else{
