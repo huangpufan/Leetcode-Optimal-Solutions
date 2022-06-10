@@ -22,7 +22,7 @@
 
 class Solution {
 public:
-    int divisorSubstrings(int num, int k) {
+    int divisorSubstrings(int num, const int k) {
         string numStr = to_string(num);
         if (k > numStr.size()) {
             return 0;
@@ -32,7 +32,7 @@ public:
 
         string zeroK(k,'0');
         for (int i = 0; i < len - k + 1; ++i) {
-            string subStr = numStr.substr(i, i + k);
+            string subStr = numStr.substr(i, k);
             if(subStr==zeroK){
                 continue;
             }
@@ -46,4 +46,5 @@ public:
     }
 };
 // 转 string 截取之后转 int,居然不让重复
+// C++ 的字符串函数是不同的，我感觉这个更好
 #endif //LEETCODE_OPTIMAL_SOLUTIONS_SOLUTION2269_H
