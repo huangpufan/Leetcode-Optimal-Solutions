@@ -12,36 +12,29 @@
 
 class Solution {
 public:
-    int max=0;
-    unordered_map<TreeNode*,int>nodeDepth;
-    int diameterOfBinaryTree(TreeNode* root) {
-        if(root== nullptr){
+    int max = INT32_MIN;
+
+    int diameterOfBinaryTree(TreeNode *root) {
+        if (root == nullptr) {
             return 0;
         }
-        updateMax(root);
+        getMax(root);
         return max-1;
     }
-    int getDepth(TreeNode* node){
-        if(node== nullptr){
+
+    int getMax(TreeNode *root) {
+        if (root == nullptr) {
             return 0;
         }
-        if(nodeDepth.find(node)!=nodeDepth.end()){
-            return nodeDepth[node];
+
+        int le = getMax(root->left);
+        int ri = getMax(root->right);
+
+        int sum = 1+le+ri;
+        if (sum > max) {
+            max = sum;
         }
-        int val= 1+std::max(getDepth(node->left), getDepth(node->right));
-        nodeDepth[node]=val;
-        return val;
-    }
-    void updateMax(TreeNode*root){
-        if(root== nullptr){
-            return;
-        }
-        int length=1+ getDepth(root->left)+ getDepth(root->right);
-        if(length>max){
-            max=length;
-        }
-        updateMax(root->left);
-        updateMax(root->right);
+        return 1+std::max(le,ri);
     }
 };
 
