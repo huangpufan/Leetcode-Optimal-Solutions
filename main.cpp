@@ -1,6 +1,6 @@
 #include <iostream>
 #include "SolutionCommon.h"
-#include "AllSolutions/Solution2269.h"
+#include "AllSolutions/Solution2269 找到一个数字的 K 美丽值.h"
 
 int main() {
     string a = "bbbbb", b = "bada";
