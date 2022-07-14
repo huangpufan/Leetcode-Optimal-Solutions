@@ -2,8 +2,8 @@
 // Created by hpf on 22-5-19.
 //
 
-#ifndef LEETCODE_OPTIMAL_SOLUTIONS_0169_相交链表_H
-#define LEETCODE_OPTIMAL_SOLUTIONS_0169_相交链表_H
+#ifndef LEETCODE_OPTIMAL_SOLUTIONS_0169_多数元素_H
+#define LEETCODE_OPTIMAL_SOLUTIONS_0169_多数元素_H
 #include "../SolutionCommon.h"
 
 // 169. 多数元素 ez
@@ -36,4 +36,4 @@ public:
 // 最呆的方法就是 _table 计数。有无好方法，我想想。想起一个计算机科学导论的解法，就是投票，因为大于一半，所以顶掉所有人还能剩下
 
 
-#endif //LEETCODE_OPTIMAL_SOLUTIONS_0169_相交链表_H
+#endif //LEETCODE_OPTIMAL_SOLUTIONS_0169_多数元素_H
